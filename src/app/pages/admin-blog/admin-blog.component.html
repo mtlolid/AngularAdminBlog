@@ -1,0 +1,40 @@
+<div class="wrap">
+    <div class="left">
+        <div class="blogs">Blogs</div>
+    </div>
+
+    <div class="right">
+
+        <div class="blogInput">
+            <input [(ngModel)]="titleInput" type="text" placeholder="title here...">
+            <textarea [(ngModel)]="textInput" placeholder="text here..." cols="30" rows="10"></textarea>
+            <input [(ngModel)]="authorInput" type="text" placeholder="author here...">
+            <input (click)="addBlogs()" *ngIf="!editCheck" type="button" value="Add">
+            <input (click)="saveBlog()" *ngIf="editCheck" type="button" value="Save">
+        </div>
+        
+
+        <table>
+
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Text</th>
+                <th>Author</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            
+            <tr *ngFor="let elem of blogsArray">
+                <td>{{ elem.id }}</td>
+                <td>{{ elem.title }}</td>
+                <td>{{ elem.text }}</td>
+                <td>{{ elem.author }}</td>
+                <td><input (click)="editBlog(elem.id)" type="button" value="Edit"></td>
+                <td><input (click)="removeBlog(elem.id)" [disabled]="editCheck" type="button" value="Delete"></td>
+            </tr>
+        
+        </table>
+
+    </div>
+</div>

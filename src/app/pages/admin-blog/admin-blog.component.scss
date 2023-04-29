@@ -1,0 +1,80 @@
+.wrap{
+    display: flex;
+
+    .left{
+        width: 20%;
+        height: 90vh;
+        padding: 10px;
+        
+        .blogs{
+            width: 90%;
+            height: 10%;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            background-color: #31393F;
+            border-radius: 5px;
+        }
+    }
+
+    .right{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .blogInput{
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+
+            input{
+                padding-left: 5px;
+                height: 30px;
+                margin: 10px 0 10px 0;
+            }
+
+            input[type = "button"]{
+                width: 60px;
+                height: 30px;
+                padding: 0;
+                margin: 0;
+                background-color: #31393E;
+                color: white;
+                border: none;
+                border-radius: 5px;
+            }
+
+            textarea{
+                padding-left: 5px;
+                resize: none;
+            }
+        }
+
+        table{
+            margin-top: 10px;
+            width: 100%;
+            
+            tr{
+                border-top: 1px solid gray;
+                height: 50px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                td, th{
+                    width: 15%;
+                    text-align: center;
+                }
+                input{
+                    height: 30px;
+                    padding: 0 10px 0 10px;
+                    color: white;
+                    background-color: #303A3F;
+                    border: none;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}
